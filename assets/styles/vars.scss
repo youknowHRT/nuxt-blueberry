@@ -1,0 +1,25 @@
+:root{
+  --welcome-bg-end: #8f4cd7;
+  --welcome-bg-start: #5d33be;
+  --numPad-bg: #f7f7f7;
+  --common-block-bg: #fff;
+  --amount-text-color: #53a867;
+  --numPad-msgRow-bg: var(--common-block-bg);
+  --app-name-color: #7878FF;
+  --common-theme-bg: #5c33be;
+  --main-button-bg: var(--common-theme-bg);
+  --dialog-header-color: #fff;
+  --tag-bg: #EFEFEF;
+  --tag-active-bg: #dad0f1;
+  --list-border-color: #ddd;
+  --list-sub-text-color: #999;
+  --bar-bg: #e4e1e1;
+}
+
+:root:root{
+  --van-tabbar-item-font-size: 14px;
+  --van-button-primary-background: var(--main-button-bg);
+  --van-button-primary-border-color: var(--main-button-bg);
+  --van-overlay-z-index: 100;
+  --van-toast-default-width: 120px;
+}

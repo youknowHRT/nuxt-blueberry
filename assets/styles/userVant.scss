@@ -1,0 +1,20 @@
+.van-tabs.fullHeight{
+  height: 100%;
+  .van-tabs__content{
+    height: calc(100% - 44px);
+    .van-tab__panel{
+      height: 100%;
+      // padding: 16px;
+    }
+  }
+}
+.van-dialog__footer{
+  .van-button--default{
+    border: unset
+  }
+}
+.van-popup.van-toast{
+  background: var(--van-toast-background);
+  width:var(--van-toast-default-width);
+  height: var(--van-toast-default-width);
+}
