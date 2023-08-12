@@ -9,13 +9,15 @@ generator client {
 
 model User {
   id         Int       @id @default(autoincrement())
-  email      String
-  created_at DateTime
-  update_at  DateTime
+  email      String    @unique
+  createdAt DateTime   @default(now())
 }
 
-model Item {
-  id      BigInt      @id @default(autoincrement())
-  user_id Int
-  amount Int
+model ValidationCode {
+  id         BigInt    @id @default(autoincrement())
+  code       String
+  email      String    @unique
+  usedAt     DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime?
 }

@@ -7,10 +7,9 @@
  </div>
 </template>
 <script lang='ts' setup>
-    // httpPost('/api/sendEmail', {
-    //   name: "小易",
-    //   job: "前端a",
-    //   })
+    // httpPost('/api/validation_codes', {
+    //   email:'15921363438@163.com',
+    //  })
 </script>
 <style scoped lang='scss'>
  

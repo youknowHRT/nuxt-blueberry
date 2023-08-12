@@ -40,7 +40,8 @@ export function httpRequest<T = unknown>(
           showToast('服务器故障')
           break
         default:
-          showToast('网络连接故障')
+          const msg = response._data.message || '网络连接故障'
+          showToast(msg)
           break
       }
     },

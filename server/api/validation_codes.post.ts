@@ -34,12 +34,10 @@ export default defineEventHandler(async (context) => {
     mailOptions.html = getHtml(params)
     let resp = null
     const resObj = {
-        code: 200,
         msg: '',
-        data: {
-            messageId: '',
-            code:''
-        }
+        // data: {
+        //     messageId: '',
+        // }
     }
     try {
         console.log('开始发送邮件')
@@ -47,15 +45,14 @@ export default defineEventHandler(async (context) => {
         // 保存到库里
     } catch (error) {
         console.log('报错了', error)
-        resObj.code = 10001
         resObj.msg = 'Submit Fail !'
     } finally {
         // console.log('发送完成', resp)
         if (resp?.messageId) {
             // 根据email 查找对应的数据，然后进行code更新，没有就新增保存
             generateNewCode(email, params.code)
-            resObj.msg = 'Submit Success !'
-            resObj.data.messageId = resp.messageId
+            resObj.msg = '请在邮箱查看验证码 !'
+            // resObj.data.messageId = resp.messageId
         }
         return resObj
     }
