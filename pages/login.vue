@@ -98,16 +98,17 @@ const startCountDown = () => {
   }, 1000)
 }
 const getValidateCode = () => {
-  // startCountDown()
-  // refForm
-  //   .value!.validate('email')
-  //   .then((_) => {
-  //     http.post('/validation_codes', { email: formData.email }, { _autoLoading: true })
-  //   })
-  //   .catch((err) => {
-  //     validCodeBtnUse()
-  //     throw err
-  //   })
+  console.log($fetch,'ssss🦈')
+  startCountDown()
+  refForm
+    .value!.validate('email')
+    .then((_) => {
+      http.post('/api/validation_codes', { email: formData.email }, { _autoLoading: true })
+    })
+    .catch((err) => {
+      validCodeBtnUse()
+      throw err
+    })
 }
 const handleRouteBack = () => {
   console.log('back')
