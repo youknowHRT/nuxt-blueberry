@@ -2,12 +2,14 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
+    "start": "nuxt start",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "migrate": "npx prisma migrate dev --name init --schema server/database/schema.prisma"
+    "migrate": "npx prisma migrate dev --name init --schema server/database/schema.prisma",
+    "clear":"npx prisma migrate reset  --schema server/database/schema.prisma"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
